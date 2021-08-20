@@ -84,5 +84,17 @@ public class Review {
         System.out.println("names.size() = " + names.size());
 
 
+        System.out.println("-----------------");
+        ArrayList<String> datas = new ArrayList<>();
+
+        datas.addAll(Arrays.asList("Zaid","Dayz","Jenna"));
+        System.out.println("datas = " + datas);
+        System.out.println("datas.indexOf(\"Jenna\") = " + datas.indexOf("Jenna"));
+        System.out.println("datas.lastIndexOf(\"Dayz\") = " + datas.lastIndexOf("Dayz"));
+
+
+
+
+
     }
 }

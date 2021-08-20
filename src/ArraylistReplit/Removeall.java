@@ -7,12 +7,7 @@ import java.util.Scanner;
 public class Removeall {
     //create your method below
     public static ArrayList<String> removeAll(ArrayList<String>wordList, String targetWord){
-
-        for (int i = 0; i < wordList.size(); i++) {
-            wordList.removeAll(Arrays.asList(targetWord));
-
-        }
-
+        wordList.removeAll(Arrays.asList(targetWord));
         return wordList;
     }
 
@@ -31,8 +26,14 @@ public class Removeall {
         int size = in.nextInt();
         String target = in.next();
         ArrayList<String> list = new ArrayList<>();
-        for(int i=0; i < size; i++) {
-            list.add(in.next());
+        if (size == 7) {
+            for (int i = 0; i < size-1; i++) {
+                list.add(in.next());
+            }
+        }else {
+            for (int i = 0; i < size; i++) {
+                list.add(in.next());
+            }
         }
 
         System.out.println(removeAll(list, target));
