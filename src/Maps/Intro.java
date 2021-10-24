@@ -39,8 +39,8 @@ public class Intro {
         System.out.println("===============================================");
 
         Map<String,Integer> newMethods = new HashMap<>();
-        newMethods.put("Feruza",1000);
-        newMethods.put("Mucahit",1000);
+        newMethods.put("Feruza",90000);
+        newMethods.put("Mucahit",2200000);
         newMethods.put("Ahmed",1000);
         newMethods.put("Zaid",1000);
         newMethods.put("Nate",1000);
@@ -50,10 +50,48 @@ public class Intro {
 
 
         System.out.println("-------------------------------------------------------");
+
+        //Iteration of keys only use KeySet Like getting the names only
         for (String each : newMethods.keySet()) {
             System.out.println(each+" : "+newMethods.get(each));
         }
 
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------------------------------------------------");
+
+        // if you want to get values only use .Values()
+        for (Integer eachValue : newMethods.values()) {
+            System.out.println("eachValue = " + eachValue);
+
+        }
+
+        // if you want to get the entries meaning the keys and values use entrySet
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------------------------------------------------");
+        for (Map.Entry<String, Integer> eachMember : newMethods.entrySet()) {
+//            System.out.println("eachMember = " + eachMember);
+            System.out.println(eachMember.getKey()+" : "+ eachMember.getValue());
+        }
+
+        System.out.println(newMethods);
+        System.out.println("-------------------------------------------------------");
+        System.out.println("-------------------------------------------------------");
+
+
+        // find the max salary
+
+        int Max = Integer.MIN_VALUE;
+        String name ="";
+        for (Map.Entry<String, Integer> eachEntry : newMethods.entrySet()) {
+            String eachName = eachEntry.getKey();
+            Integer eachSalary = eachEntry.getValue();
+            if (eachSalary>Max){
+                Max=eachSalary;
+                name =  eachName;
+            }
+        }
+        System.out.println(name);
+        System.out.println(Max);
 
     }
 
