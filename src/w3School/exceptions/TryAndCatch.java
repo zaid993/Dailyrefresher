@@ -1,4 +1,4 @@
-package wThreeSchool.Exceptions;
+package w3School.exceptions;
 
 public class TryAndCatch {
     public static void main(String[] args) throws InterruptedException {
