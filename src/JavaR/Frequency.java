@@ -4,11 +4,13 @@ public class Frequency {
 
     public static void main(String[] args) {
 
+
+        // frequency of given word
         String str = "java java";
         int f = 0;
 
-        for (int i = 0; i <= str.length()-4; i++) {
-            if (str.substring(i,i+4).equalsIgnoreCase("java")){
+        for (int i = 0; i <= str.length() - 4; i++) {
+            if (str.substring(i, i + 4).equalsIgnoreCase("java")) {
                 f++;
             }
 
@@ -17,12 +19,11 @@ public class Frequency {
 
 
         // frequency of any word
-
         String str2 = "Python Python";
         int f2 = 0;
 
-        for (int i = 0; i <= str2.length()-6; i++) {
-            if (str2.substring(i,i+6).equalsIgnoreCase("Python")){
+        for (int i = 0; i <= str2.length() - 6; i++) {
+            if (str2.substring(i, i + 6).equalsIgnoreCase("Python")) {
                 f2++;
             }
 
@@ -30,17 +31,13 @@ public class Frequency {
         System.out.println("f2 = " + f2);
 
 
-
-
-
-
         // frequency of any word
         String str3 = "c# C# C# C# C#";
         String word = "C#";
         int f3 = 0;
 
-        for (int i = 0; i <= str3.length()-word.length(); i++) {
-            if (str3.substring(i,i+word.length()).equalsIgnoreCase(word)){
+        for (int i = 0; i <= str3.length() - word.length(); i++) {
+            if (str3.substring(i, i + word.length()).equalsIgnoreCase(word)) {
                 f3++;
             }
 
@@ -53,15 +50,14 @@ public class Frequency {
         String wrd = "java";
         int Count = 0;
 
-        while (sent.contains(wrd)){
+        while (sent.contains(wrd)) {
             Count++;
-            sent = sent.replaceFirst("java","");
+            sent = sent.replaceFirst("java", "");
 
         }
         System.out.println("Count = " + Count);
 
         System.out.println("------------------------------------------------");
-
 
 
         // frequency of character using regular loop
@@ -70,10 +66,10 @@ public class Frequency {
         char ch = 'f';
         int frqncy = 0;
 
-        for (int index = 0; index <= sqn.length()-1; index++) {
-             if (sqn.charAt(index)==ch){
-                 frqncy++;
-             }
+        for (int index = 0; index <= sqn.length() - 1; index++) {
+            if (sqn.charAt(index) == ch) {
+                frqncy++;
+            }
         }
         System.out.println("frqncy = " + frqncy);
 
@@ -87,51 +83,42 @@ public class Frequency {
         System.out.println("--------------------------------------");
 
 
-
-
-
-
-
-
         /// using nested loop to get a2b1c3
         String string = "aabccc";
-
         String finalResult = "";
-        String dups= "";
-
-
+        String dups = "";
         //1- remove duplicated
-        for (int i = 0; i <= string.length()-1; i++) {
-
-            if (!dups.contains(""+string.charAt(i))){
-             dups+=string.charAt(i);
-            }else {
+        for (int i = 0; i <= string.length() - 1; i++) {
+            if (!dups.contains("" + string.charAt(i))) {
+                dups += string.charAt(i);
+            } else {
                 continue;
             }
-
         }
         System.out.println("dups = " + dups);
-
-
         //create loop to go through non-duplicated String
-        for (int j = 0; j <= dups.length()-1; j++) {
+        for (int j = 0; j <= dups.length() - 1; j++) {
 
 
             //frequency of first or one character
             char ch3 = dups.charAt(j); // a, b, c
             int frqs = 0; // the frequency of every one
-            for (int i = 0; i <= string.length()-1; i++) {
+            for (int i = 0; i <= string.length() - 1; i++) {
 
-                if (string.charAt(i) == ch3){
-                    frqs++;}
-                                                          }
-
-            finalResult += ""+ch3+ frqs;
-                                             }
-
-        System.out.println("finalResult = " + finalResult);
+                if (string.charAt(i) == ch3) {
+                    frqs++;
+                }
+                finalResult += "" + ch3 + frqs;
+            }
+            System.out.println("finalResult = " + finalResult);
 
 
 
+
+
+
+
+
+        }
     }
 }
