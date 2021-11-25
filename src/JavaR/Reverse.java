@@ -74,6 +74,25 @@ public class Reverse {
             System.out.print(arrraySenctence[i]+" ");
         }
 
+        System.out.println();
+
+
+
+        // reverse each word of array
+        String[] arrr = {"Java","C#","Python"};
+
+        for (int j = 0; j < arrr.length; j++) {
+            //then add all of this inside loop for all the other elements
+            //start with reversing first one
+            String element = arrr[j];
+            String revs = "";
+
+            for (int i = element.length()-1; i >= 0 ; i--) {
+                revs+=element.charAt(i);
+            }
+            arrr[j]=revs;
+        }
+        System.out.println(Arrays.toString(arrr));
 
 
 
