@@ -1,4 +1,4 @@
-package JavaR;
+package JavaR.regular_Methods;
 
 public class Frequency {
 

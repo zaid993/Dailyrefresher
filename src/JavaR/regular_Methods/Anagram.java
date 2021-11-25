@@ -1,4 +1,4 @@
-package JavaR;
+package JavaR.regular_Methods;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

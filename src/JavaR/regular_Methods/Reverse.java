@@ -1,4 +1,4 @@
-package JavaR;
+package JavaR.regular_Methods;
 
 import java.util.Arrays;
 import java.util.Scanner;
