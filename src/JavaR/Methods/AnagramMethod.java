@@ -5,7 +5,14 @@ import java.util.Arrays;
 public class AnagramMethod {
     public static void main(String[] args) {
         System.out.println("isAnagram(\"listen\",\"silent\") = " + isAnagram("listen", "silent"));
+
+
+        System.out.println("isAnagram(\"earth\",\"heart\") = " + isAnagram("earth", "heart"));
+
+
+
     }
+
 
 
     public static boolean isAnagram(String str1, String str2){
