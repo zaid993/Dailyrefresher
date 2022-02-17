@@ -3,21 +3,23 @@ package JavaR.Methods;
 public class FrequencyMethod {
     public static void main(String[] args) {
 
-        System.out.println("freqOfOneChar(\"SSSWWEQWEWQEWQWQM\",'S') = "
-                + freqOfOneChar("SSSWWEQWEWQEWQWQM", 'S'));
+//        System.out.println("freqOfOneChar(\"SSSWWEQWEWQEWQWQM\",'S') = "
+//                + freqOfOneChar("SSSWWEQWEWQEWQWQM", 'S'));
+//
+//        System.out.println("frqNum(\"AABBCC\") = "
+//                + frqNum("AABBCC"));
+//
+//        System.out.println("frqNum(\"AAAAAAAAAAAAAAAAAAAAAAAAWWWWWEEEERRRRTTTGGGFFF\") = "
+//                + frqNum("AAAAAAAAAAAAAAAAAAAAAAAAWWWWWEEEERRRRTTTGGGFFF"));
+//
+//
+//        System.out.println("wordFrequency(\"JAVA JAVA JAVA\",\"java\") = "
+//                + wordFrequency("JAVA JAVA JAVA", "java"));
+//
+//        System.out.println("wordFrequency2(\"ZAID ZAID ZAID\", \"ZAID\") = " + wordFrequency2("ZAID ZAID ZAID", "ZAID"));
 
-        System.out.println("frqNum(\"AABBCC\") = "
-                + frqNum("AABBCC"));
 
-        System.out.println("frqNum(\"AAAAAAAAAAAAAAAAAAAAAAAAWWWWWEEEERRRRTTTGGGFFF\") = "
-                + frqNum("AAAAAAAAAAAAAAAAAAAAAAAAWWWWWEEEERRRRTTTGGGFFF"));
-
-
-        System.out.println("wordFrequency(\"JAVA JAVA JAVA\",\"java\") = "
-                + wordFrequency("JAVA JAVA JAVA", "java"));
-
-        System.out.println("wordFrequency2(\"ZAID ZAID ZAID\", \"ZAID\") = " + wordFrequency2("ZAID ZAID ZAID", "ZAID"));
-
+        System.out.println("news(\"bbbbnnnmmmkjjyttyttyytu\") = " + news("bbbbnnnmmmkjjyttyttyytu"));
     }
 
     // how many times a character occurred in the string
@@ -70,6 +72,63 @@ public class FrequencyMethod {
 
          return finalo;
     }
+
+
+
+
+    public static String news(String str){
+        String ret = "";
+
+        // we first start removing duplicates
+        String removedDups = "";
+        for (int i = 0; i < str.length()-1; i++) {
+            if (!removedDups.contains(""+str.charAt(i))){
+                removedDups+=str.charAt(i);
+            }
+        }
+
+        //loop in the chars of the removed duplicastes
+        for (int j = 0; j < removedDups.length()-1; j++) {
+
+            //get the first char from removed duplicates and compare
+            //it with original str
+            char ch1 = removedDups.charAt(j);
+            int frq = 0;
+            for (int i = 0; i < str.length(); i++) {
+                if (ch1==str.charAt(i)){
+                    frq++;
+                }
+            }
+
+
+            ret += ""+ch1+frq;
+        }
+
+        return ret;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -27,6 +27,26 @@ public class RemoveDuplicatesMethod {
     }
 
 
+    public static String rem(String du){
+
+        String res = "";
+
+        for (int i = 0; i < du.length()-1; i++) {
+             if (!res.contains(""+du.charAt(i))){
+                 res+=du.charAt(i);
+             }
+
+        }
+        return res;
+    }
+
+
+
+
+
+
+
+
 
 // using for each loop but you need array
     public static String removeEachDups(String str){
@@ -55,6 +75,15 @@ public class RemoveDuplicatesMethod {
         return res;
 
     }
+
+
+
+
+
+
+
+
+
 
 
 }

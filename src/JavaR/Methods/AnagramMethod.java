@@ -10,6 +10,8 @@ public class AnagramMethod {
         System.out.println("isAnagram(\"earth\",\"heart\") = " + isAnagram("earth", "heart"));
 
 
+        System.out.println("Ana(\"listen\",\"silent\") = " + Ana("listen", "silent"));
+
 
     }
 
@@ -28,6 +30,26 @@ public class AnagramMethod {
         return isAnagram;
     }
 
+
+
+
+    public static boolean Ana(String st1 , String st2){
+        boolean isAnagram=false;
+
+        char[] ch1 = st1.toCharArray();
+        char[] ch2 = st2.toCharArray();
+
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+
+        if(Arrays.equals(ch1,ch2)){
+            isAnagram=true;
+        }else {
+            isAnagram=false;
+            System.out.println("Not Anagram");
+        }
+        return isAnagram;
+    }
 
 
 }
