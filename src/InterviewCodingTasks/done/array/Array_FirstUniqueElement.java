@@ -1,4 +1,4 @@
-package InterviewCodingTasks.done;
+package InterviewCodingTasks.done.array;
 
 public class Array_FirstUniqueElement {
 

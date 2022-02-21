@@ -1,4 +1,4 @@
-package InterviewCodingTasks;
+package InterviewCodingTasks.done.array;
 
 import java.util.Arrays;
 
