@@ -1,4 +1,4 @@
-package InterviewCodingTasks;
+package InterviewCodingTasks.done;
 
 import java.util.ArrayList;
 import java.util.Arrays;

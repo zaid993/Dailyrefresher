@@ -1,4 +1,4 @@
-package InterviewCodingTasks;
+package InterviewCodingTasks.done;
 
 public class Array_FindMaximum {
     /*
